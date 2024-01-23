@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['getxamltype_0',['getxamltype',['../class_u_d5_t1_1_1_win_u_i_1_1_app.html#a129ce00ac414ac7a20ed29307d5f2a36',1,'UD5T1.WinUI.App.GetXamlType(global::System.Type type)'],['../class_u_d5_t1_1_1_win_u_i_1_1_app.html#a744af97cc51bc06554fb4a81724d5d01',1,'UD5T1.WinUI.App.GetXamlType(string fullName)'],['../class_u_d5_t1_1_1_u_d5_t1___xaml_type_info_1_1_xaml_meta_data_provider.html#a3ebc588c7d330529bb5a25f520d7851a',1,'UD5T1.UD5T1_XamlTypeInfo.XamlMetaDataProvider.GetXamlType(global::System.Type type)'],['../class_u_d5_t1_1_1_u_d5_t1___xaml_type_info_1_1_xaml_meta_data_provider.html#ad278a7d7b9107629c11dbab69caca15d',1,'UD5T1.UD5T1_XamlTypeInfo.XamlMetaDataProvider.GetXamlType(string fullName)']]],
+  ['getxmlnsdefinitions_1',['getxmlnsdefinitions',['../class_u_d5_t1_1_1_win_u_i_1_1_app.html#a004f3dc2dc96bc8494388a9787c83902',1,'UD5T1.WinUI.App.GetXmlnsDefinitions()'],['../class_u_d5_t1_1_1_u_d5_t1___xaml_type_info_1_1_xaml_meta_data_provider.html#ae3d4777d3f7f409d7ce0c3d8cfd1ed24',1,'UD5T1.UD5T1_XamlTypeInfo.XamlMetaDataProvider.GetXmlnsDefinitions()']]]
+];

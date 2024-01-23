@@ -1,6 +1,215 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UD5T1.MainPage">
+             x:Class="UD5T1.MainPage"
+             BackgroundColor="DarkGray">
 
+    <Grid 
+        Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition 
+                Height="30*"/>
+            <RowDefinition 
+                Height="70*"/>
+        </Grid.RowDefinitions>
+
+        <Frame
+            Grid.Row="0"
+            Padding="10"
+            BackgroundColor="Gray"
+            BorderColor="Transparent">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*" />
+                    <RowDefinition Height="90*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label 
+                   Grid.Row="1"
+                   Grid.ColumnSpan="3"
+                   Text="TOTAL POR PERSONA"
+                   HorizontalOptions="Center"
+                   TextColor="Cyan"
+                   FontAttributes="Bold" />
+
+                <Label 
+                   x:Name="lblTotal"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   VerticalOptions="CenterAndExpand"
+                   Text="$0.00"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontSize="35"
+                   FontAttributes="Bold"
+                   /> 
+
+                <BoxView 
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     VerticalOptions="Center"
+                     Color="Azure"
+                     Margin="0,10,0,0"
+                     WidthRequest="2"
+                     HeightRequest="150"/>
+
+                <VerticalStackLayout
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    >
+                    <Label 
+                        Text="SUBTOTAL" 
+                        TextColor="White" />
+                    <Label 
+                        x:Name="lblSubtotal" 
+                        Text="$0.00" 
+                        TextColor="White" 
+                        FontAttributes="Bold" />
+                    <Label 
+                        Text="PROPINA" 
+                        TextColor="White" 
+                        Margin="0,10,0,0" />
+                    <Label 
+                        x:Name="lblPropinaPorPersona" 
+                        Text="$0.00" 
+                        TextColor="White" 
+                        FontAttributes="Bold" />
+                </VerticalStackLayout>
+                
+            </Grid>
+
+        </Frame>
+
+        <Grid
+            Grid.Row="1"
+            Margin="0,15,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="35*" />
+                <ColumnDefinition Width="65*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="25*" />
+            </Grid.RowDefinitions>
+
+            <Label
+                VerticalOptions="Center"
+                Text="Importe Cuenta: $"
+                TextColor="White">
+            </Label>
+
+            <Entry
+                x:Name="txtCuenta"
+                Grid.Row="0"
+                Grid.Column="1"
+                VerticalOptions="Center"
+                Text="0.0"
+                TextColor="White"
+                BackgroundColor="Gray"
+                Keyboard="Numeric"
+                Completed="TxtCuenta_Completed"
+                ></Entry>
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                VerticalOptions="Center"
+                Text="Elige la propina"
+                TextColor="White"
+                ></Label>
+
+            <HorizontalStackLayout
+                Grid.Column="1"
+                Grid.Row="1"
+                HeightRequest="70"
+                Spacing="10"
+                HorizontalOptions="CenterAndExpand"
+                >
+                <Button
+                    Text="10%"
+                    WidthRequest="70"
+                    Clicked="Button_Clicked"/>
+                <Button
+                    Text="15%"
+                    WidthRequest="70"
+                    Clicked="Button_Clicked"/>
+                <Button
+                    Text="20%"
+                    WidthRequest="70"
+                    Clicked="Button_Clicked"/>
+            </HorizontalStackLayout>
+
+            <Label
+                x:Name="lblPropina"
+                Grid.Row="2"
+                Grid.Column="0"
+                VerticalOptions="Center"
+                Text="Propina: 0%"
+                TextColor="White"
+                ></Label>
+
+            <Slider
+                x:Name="sldPropina"
+                Grid.Column="1"
+                Grid.Row="2"
+                Minimum="0"
+                Maximum="50"
+                VerticalOptions="Center"
+                ValueChanged="SldPropina_ValueChanged">
+            </Slider>
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                VerticalOptions="Center"
+                Text="Divide el total"
+                TextColor="White" />
+
+            <HorizontalStackLayout
+                Grid.Row="3"
+                Grid.Column="1"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+                <Button
+                    x:Name="btnMenos"
+                    Text="-"
+                    WidthRequest="70"
+                    Clicked="BtnMenos_Clicked"/>
+
+                <Label
+                    x:Name="lblPersonas"
+                    Margin="-5, 0, -5, 0"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    HeightRequest="50"
+                    WidthRequest="100"
+                    Text="1"
+                    FontSize="25"
+                    TextColor="White"
+                    BackgroundColor="Gray"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center" />
+
+                <Button
+                    x:Name="btnMas"
+                    Text="+"
+                    WidthRequest="70"
+                    Clicked="BtnMas_Clicked"/>
+            </HorizontalStackLayout>
+
+        </Grid>
+
+    </Grid>
+    
 </ContentPage>
